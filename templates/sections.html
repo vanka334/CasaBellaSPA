@@ -1,0 +1,9 @@
+{% extends 'MainPage.html' %}
+{% block sections %}
+    
+    {% for section in sections %}
+
+        <a class="section" type="button">{{ section.name }}</a>
+
+    {% endfor %}
+{% endblock %}

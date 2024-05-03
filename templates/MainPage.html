@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static "css/Main.css" %}">
+</head>
+<body>
+<script src="{% static "js/menuView.js" %}"></script>
+<script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+<div class="intro">
+    <div class = "intro_content">
+<header class="header">
+    <img class="logo" src="{% static "img/logo.png" %}" />
+    
+    
+</header>
+        <div class="container centered  ">
+            <h1>Меню ресторана</h1>
+            <div class=" divi container">
+                <div class="vibor">
+                    <button id="Season_menu_btn" type="button"  class="menus Menu_text_selected border_top_left" >
+
+                    <p class=" align-self-center margin-0 ">Сезонное меню</p>
+                </button>
+                    <button id="Lenten_menu_btn"  type="button" class="invisibles menus Menu_text" href="gogo.html">
+
+                    <p class=" align-self-center margin-0 ">Постное меню</p>
+                </button>
+                    <button id="Mushrooms_menu_btn"  type="button" class="invisibles menus Menu_text" href="gogo.html">
+
+                    <p class=" align-self-center margin-0 ">Лисички</p>
+                </button>
+                    <button id="NewYear_menu_btn"  type="button" class="invisibles menus Menu_text" href="gogo.html">
+
+                    <p class=" align-self-center margin-0 ">Новогоднее меню</p>
+                </button>
+                    <button id="Maslenitsa_menu_btn"  type="button" class="invisibles menus Menu_text" href="gogo.html">
+
+                    <p class=" align-self-center margin-0 ">Масленница</p>
+                </button>
+                    
+                 <button id="Main_menu_btn"  type="button" class="menus Menu_text " href="gogo.html">
+
+                    <p class=" align-self-center margin-0 ">Основное меню</p>
+                </button>
+
+                <button   type="button" class="menus Menu_text " href={% url 'index' %}>
+
+                    <p class=" align-self-center margin-0 ">Детское меню</p>
+                </button>
+               <button id="Bar_menu_btn"  type="button" class="menus Menu_text " >
+
+                    <p class=" align-self-center margin-0 ">Барная карта</p>
+                </button>
+                    
+                <button id="Wine_menu_btn"  type="button" class="menus Menu_text border_top_right " href="gogo.html">
+
+                    <p class=" align-self-center margin-0 ">Винная карта</p>
+                </button>
+                </div>
+                <div class="Menu_sections">
+                {% block sections %}
+                    {% endblock %}
+                   
+
+                </div>
+            </div>
+            
+            
+       </div>
+    </div>
+<div class="backImg">
+    <img class="backImg_media" src="{% static "img/CBTheme.jpg" %}"/>
+    
+</div>
+</div>
+
+
+</body>
+</html>
